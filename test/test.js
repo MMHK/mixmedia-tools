@@ -1,5 +1,3 @@
-const assert = require('assert')
-
 global.expect = function (result) {
 
     var resultHandle = {
