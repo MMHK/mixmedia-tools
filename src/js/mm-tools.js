@@ -112,7 +112,7 @@
              var nagative_flag = start < 0 && end < 0 ? true : false;
              var target_reactive = target < 0 ? 1 : -1;
 
-             if (target_ > arr.length) {
+             if (Math.abs(target_) > arr.length) {
                  throw new rangeError('The 1st parameter must less than length of the 2nd parameter');
              }
 
@@ -127,7 +127,7 @@
                      arr[target_ - j] = arr[i - 1]
                  }
              }
-
+             console.log(arr)
              return arr;
          }
 
