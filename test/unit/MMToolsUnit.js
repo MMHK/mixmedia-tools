@@ -12,7 +12,7 @@ describe('mm-tools', () => {
         }, {
             a: 666,
             e: null
-        })).to.equal({
+        })).to.literallyEqual({
             a: 666,
             b: 2,
             c: 3,
@@ -38,7 +38,7 @@ describe('mm-tools', () => {
 
     it('should be return a new array', () => {
         var arr = [1, 2, 3, 4, 5]
-        expect(MMTools.copyWithin(arr, -1, -2, 3)).to.equal([1, 2, 3, 4, 4])
+        expect(MMTools.copyWithin(arr, -1, -2, 3)).to.literallyEqual([1, 2, 3, 4, 4])
     })
 
     it('should be return a obj with key which you want it', () => {
@@ -46,7 +46,7 @@ describe('mm-tools', () => {
             chen: 1,
             guo: 2,
             mei: 3
-        })).to.equal({
+        })).to.literallyEqual({
             zhang: 1,
             da: 2,
             zhi: 3
