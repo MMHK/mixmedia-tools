@@ -27,7 +27,7 @@ global.expect = function (result) {
 
 
     var literallyJudge = function (result, expect) {
-        if (typeof expect == 'object' || typeof expect == 'array') {
+        if (typeof expect == 'object' && expect != null || typeof expect == 'array') {
             var expectKeys = Object.keys(expect)
             var keysLen = expectKeys.length
 
