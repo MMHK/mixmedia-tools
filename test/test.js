@@ -34,7 +34,8 @@ global.expect = function (result) {
             if (keysLen != Object.keys(result).length) return false
           
             while (keysLen--) {
-                if (result[expectKeys[keysLen]] === undefined || result[expectKeys[keysLen]] !== expect[expectKeys[keysLen]]) {
+                let key = expectKeys[keysLen]
+                if (!(key in result) || result[key] !== expect[key]) {
                     return false
                 }
             }
