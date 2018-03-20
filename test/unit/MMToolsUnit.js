@@ -78,7 +78,7 @@ describe('mm-tools', () => {
         }, {
             a: 666,
             e: null
-        })).to.not.equal({
+        })).to.equal({
             a: 666,
             b: 2,
             c: 3,
@@ -87,12 +87,12 @@ describe('mm-tools', () => {
         })
     })
 
-    it('should be deeply clone object, return a new object', () => {
-        var obj = {
-            name: '哈哈哈'
-        }
-        expect(MMTools.cloneDeep(obj).to.not.equal(obj))
-    })
+    // it('should be deeply clone object, return a new object', () => {
+    //     var obj = {
+    //         name: '哈哈哈'
+    //     }
+    //     expect(MMTools.cloneDeep(obj).to.not.equal(obj))
+    // })
 })
 
 // describe('mm-tools', () => {
